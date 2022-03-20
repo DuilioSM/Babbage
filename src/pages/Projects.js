@@ -1,5 +1,7 @@
 import React from 'react'
+import Cisco from '../components/Cisco'
 import Problem from '../components/Problem'
+import TableCisco from '../components/TableCisco'
 import WebApp from '../components/WebApp'
 
 function Projects() {
@@ -7,6 +9,9 @@ function Projects() {
     <>
       <Problem/>
       <WebApp/>
+      <TableCisco/>
+      <Cisco/>
+      
     </>
   )
 }
