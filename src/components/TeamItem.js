@@ -4,7 +4,7 @@ import IconFacebook from "../assets/call.png"
 
 function TeamItem({ name, position, img, link, num }) {
   return (
-    <div className="w-56 h-auto flex flex-col items-center justify-center pt-16 pb-10 px-4 shadow-item	rounded-xl	">
+    <div className="w-full h-auto flex flex-col items-center justify-center pt-16 pb-10 px-4 shadow-item	rounded-xl md:w-56	">
       <img src={img} alt={name} />
       <h4 className="text-lg leading-normal	tracking-widest font-extrabold">
         {name}

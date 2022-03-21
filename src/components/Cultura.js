@@ -3,9 +3,9 @@ import CulturaItem from "./CulturaItem";
 
 function Cultura() {
   return (
-    <div className="flex flex-col items-center px-20 py-20 bg-blueGray h-4/5	">
-      <h3 className=" py-8 px-20 rounded-2xl bg-white text-4xl font-extrabold leading-tight tracking-[.14em] text-highRed shadow-item">Cultura empresarial</h3>
-      <div className="flex justify-center">
+    <div className="flex flex-col items-center  py-20 bg-blueGray h-4/5	md:px-20">
+      <h3 className="py-8 mx-8 text-center rounded-2xl bg-white text-4xl font-extrabold leading-tight tracking-[.14em] text-highRed shadow-item md:px-20 md:mx-0">Cultura empresarial</h3>
+      <div className="flex flex-col justify-center items-center md:flex-row md:items-start">
         <CulturaItem
           title="Misión"
           text="Ser la empresa preferida de los clientes que buscan software de administración, buscando que nuestros desarrollos sean accesibles para nuestros clientes"
