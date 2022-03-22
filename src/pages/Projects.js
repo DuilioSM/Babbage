@@ -1,6 +1,6 @@
 import React from 'react'
-import BabbageAnimation from '../components/BabbageAnimation'
 import Cisco from '../components/Cisco'
+import Croquis from '../components/Croquis'
 import Problem from '../components/Problem'
 import TableCisco from '../components/TableCisco'
 import WebApp from '../components/WebApp'
@@ -12,7 +12,7 @@ function Projects() {
       <WebApp/>
       <TableCisco/>
       <Cisco/>
-      <BabbageAnimation/>
+      <Croquis/>
     </>
   )
 }

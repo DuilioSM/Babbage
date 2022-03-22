@@ -3,9 +3,9 @@ import LogoBitacora from "../assets/Logo-bitacora.png";
 
 function Problem() {
   return (
-    <div className="flex pt-28 pb-28 px-20 items-center text-justify bg-blueGray">
+    <div className="flex py-16 px-10 items-center text-justify bg-blueGray md:py-28 md:px-20">
       <div>
-        <h3 className="mt-20 text-5xl font-extrabold leading-tight tracking-wider">Bitacora UTJ</h3>
+        <h3 className=" text-4xl font-extrabold leading-tight tracking-wider text-center md:text-left md:text-5xl">Bitacora UTJ</h3>
         <p className="pt-1 text-l text-grayText leading-normal tracking-widest">
           La Universidad Tecnológica de Jalisco tiene varios laboratorios y
           talleres en los distintos edificios y carreras. En cada carrera hay un
@@ -36,7 +36,7 @@ function Problem() {
           obsoletos.
         </p>
       </div>
-      <img className="h-fit" alt="Logo bitácora" src={LogoBitacora}/>
+      <img className="hidden md:block md:h-fit " alt="Logo bitácora" src={LogoBitacora}/>
     </div>
   );
 }

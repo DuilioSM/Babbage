@@ -26,17 +26,13 @@ function Header() {
         <ul
           className={
             (showNav ? "left-0" : "-left-full") +
-            "  transition-left fixed justify-start bottom-0 top-[10vh] bg-grayText w-10/12 text-white space-y-5 p-5 shadow-item md:static md:flex md:space-y-0 md:text-black md:bg-transparent md:w-auto md:space-x-3 md:items-center"
+            "  transition-left fixed justify-start bottom-0 top-[10vh] bg-grayText bg w-9/12 text-white space-y-5 p-5 shadow-item md:shadow-none md:static md:flex md:space-y-0 md:text-black md:bg-transparent md:w-auto md:space-x-3 md:items-center"
           }
         >
-          <li className="hover:underline decoration-highRed decoration-4">
+          <li className="hover:underline decoration-highRed decoration-4 text-xl md:text-base">
             <Link to="/projects">Proyectos</Link>
           </li>
-          <li className="hover:underline decoration-highRed decoration-4">
-            <Link className="" to="/">
-              Cultura
-            </Link>
-          </li>
+          
           <li>
             <Link to="/">
               <button className="h-fit px-6 py-3 text-highRed  rounded-lg border-2 border-highRed hover:bg-highRed hover:text-white active:bg-white active:text-highRed">

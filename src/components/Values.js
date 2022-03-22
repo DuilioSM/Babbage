@@ -7,7 +7,7 @@ import Pasion from '../assets/pasion.png'
 
 function Values() {
   return (
-    <div className=" px-10 py-12 w-full flex flex-col items-center md:px-72 md:mx-2 md:py-16 ">
+    <div className="px-10 py-12 flex flex-col items-center md:px-60 md:mx-2 md:py-16 ">
       <h3 className=" text-5xl font-extrabold leading-tight tracking-wider">
         Valores
       </h3>

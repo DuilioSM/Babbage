@@ -62,21 +62,21 @@ const infomation = [
 
 function TableCisco() {
   return (
-    <div className="flex justify-center py-10 pb-20 bg-blueGray ">
-      <table className="shadow-item">
-        <caption className="text-3xl pb-5 font-extrabold leading-tight tracking-wider">
+    <div className="w-full flex justify-center pb-20 bg-blueGray md:">
+      <table className="shadow-item w-screen md:w-auto">
+        <caption className="text-3xl py-5 font-extrabold leading-tight tracking-wider">
           Tabla de ruteo
         </caption>
-        <thead className="">
+        <thead className="w-full text-xs">
           <tr className=" bg-grayText text-offWhite  ">
-            <th className="py-2 px-5 border-r-4 border-offWhite ">Dispositivo</th>
-            <th className="py-2 px-5 border-r-4 border-offWhite ">Interfaz</th>
-            <th className="py-2 px-5 border-r-4 border-offWhite ">Dirección IP</th>
-            <th className="py-2 px-5 border-r-4 border-offWhite ">Máscara de subred</th>
-            <th className="py-2 px-5 ">Gateway predeterminado</th>
+            <th className="border-r-2 border-offWhite md:border-r-4 md:px-5 md:py-2">Dispositivo</th>
+            <th className="border-r-2 border-offWhite md:border-r-4 md:px-5 md:py-2">Interfaz</th>
+            <th className="border-r-2 border-offWhite md:border-r-4 md:px-5 md:py-2">Dirección IP</th>
+            <th className="border-r-2 border-offWhite md:border-r-4 md:px-5 md:py-2">Máscara de subred</th>
+            <th className=" border-offWhite md:px-5 md:py-2">Gateway predeterminado</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="w-full text-xs">
           {infomation.map((info) => (
             <TableCiscoItem info={info} />
           ))}

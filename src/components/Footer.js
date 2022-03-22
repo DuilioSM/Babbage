@@ -3,12 +3,11 @@ import Logo from '../assets/Header-logo.png'
 
 function Footer() {
   return (
-    <div className='flex p-20 items-center bg-black text-grayText'>
+    <div className='flex px-5 py-10 items-center bg-black text-grayText md:p-20'>
         <div className='w-1/2'>
-            <img className='w-1/2' alt='Babbage' src={Logo}/>
-            {/* <p className='w-1/2'>Babbage es una agencia digital que brinda soluciones tecnológicas eficientes a las empresas tradicionales</p> */}
+            <img className='w-2/3 md:w-1/3' alt='Babbage' src={Logo}/>
         </div>
-        <div className='w-1/2 text-right'>
+        <div className='w-1/2 text-right text-sm'>
             <p>Todos los derechos reservados® 2022</p>
             <p>babbage@contacto.com</p>
             <a href='tel:3325979382'>+52 3325979382</a>

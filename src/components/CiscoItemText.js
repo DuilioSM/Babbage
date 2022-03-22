@@ -1,7 +1,7 @@
 import React from "react";
 
 const CiscoItemText = ({ title, text, link }) => (
-  <div className="flex flex-col items-start justify-center w-1/2">
+  <div className="flex flex-col items-center justify-center text-center md:items-start md:text-left md:w-1/2">
     <h3 className="text-2xl font-extrabold leading-tight tracking-wider">
       {title}
     </h3>
