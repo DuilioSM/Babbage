@@ -26,16 +26,16 @@ function Header() {
         <ul
           className={
             (showNav ? "left-0" : "-left-full") +
-            "  transition-left fixed justify-start bottom-0 top-[10vh] bg-grayText bg w-9/12 text-white space-y-5 p-5 shadow-item md:shadow-none md:static md:flex md:space-y-0 md:text-black md:bg-transparent md:w-auto md:space-x-3 md:items-center"
+            "  transition-left fixed justify-start bottom-0 top-[10vh] bg-grayText opacity-90 bg w-3/4 text-white space-y-5 p-5 shadow-item md:shadow-none md:static md:flex md:space-y-0 md:text-black md:bg-transparent md:w-auto md:space-x-3 md:items-center"
           }
         >
-          <li className="hover:underline decoration-highRed decoration-4 text-xl md:text-base">
+          <li className="hover:underline decoration-highRed decoration-4 text-2xl active:text-highRed md:text-base">
             <Link to="/projects">Proyectos</Link>
           </li>
           
           <li>
             <Link to="/">
-              <button className="h-fit px-6 py-3 text-highRed  rounded-lg border-2 border-highRed hover:bg-highRed hover:text-white active:bg-white active:text-highRed">
+              <button className="h-fit hover:underline decoration-highRed md:active:decoration-white decoration-4 md:active:text-highRed text-2xl rounded-lg  border-highRed md:hover:bg-highRed md:hover:text-white  md:active:bg-white active:text-highRed md:border-2 md:py-3 md:px-6 md:text-highRed md:text-base">
                 Inicio
               </button>
             </Link>
