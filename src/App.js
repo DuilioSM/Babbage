@@ -6,8 +6,9 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 
 function App() {
+  
   return (
-    <Layout>
+    <Layout >
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} exact />

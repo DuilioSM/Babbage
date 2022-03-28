@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import TableCiscoItem from "./TableCiscoItem";
+import gsap, { Power2 } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const infomation = [
   {
@@ -61,19 +64,49 @@ const infomation = [
 ];
 
 function TableCisco() {
+  let tableItem = useRef(null);
+
+  useEffect(() => {
+    gsap.from(tableItem, {
+      scrollTrigger: {
+        trigger: tableItem,
+        start: " 90%",
+        toggleActions: "play none none reverse",
+      },
+      duration: 2,
+      y:300,
+      opacity: 0,
+      marker:true,
+      ease: Power2.easeInOut,
+    });
+  }, []);
+
   return (
     <div className="w-full flex justify-center pb-20 bg-blueGray md:">
-      <table className="shadow-item w-screen md:w-auto">
+      <table
+        ref={(el) => (tableItem = el)}
+        className="shadow-item w-screen md:w-auto"
+      >
         <caption className="text-3xl py-5 font-extrabold leading-tight tracking-wider">
           Tabla de ruteo
         </caption>
         <thead className="w-full text-xs">
           <tr className=" bg-grayText text-offWhite  ">
-            <th className="border-r-2 border-offWhite md:border-r-4 md:px-5 md:py-2">Dispositivo</th>
-            <th className="border-r-2 border-offWhite md:border-r-4 md:px-5 md:py-2">Interfaz</th>
-            <th className="border-r-2 border-offWhite md:border-r-4 md:px-5 md:py-2">Dirección IP</th>
-            <th className="border-r-2 border-offWhite md:border-r-4 md:px-5 md:py-2">Máscara de subred</th>
-            <th className=" border-offWhite md:px-5 md:py-2">Gateway predeterminado</th>
+            <th className="border-r-2 border-offWhite md:border-r-4 md:px-5 md:py-2">
+              Dispositivo
+            </th>
+            <th className="border-r-2 border-offWhite md:border-r-4 md:px-5 md:py-2">
+              Interfaz
+            </th>
+            <th className="border-r-2 border-offWhite md:border-r-4 md:px-5 md:py-2">
+              Dirección IP
+            </th>
+            <th className="border-r-2 border-offWhite md:border-r-4 md:px-5 md:py-2">
+              Máscara de subred
+            </th>
+            <th className=" border-offWhite md:px-5 md:py-2">
+              Gateway predeterminado
+            </th>
           </tr>
         </thead>
         <tbody className="w-full text-xs">

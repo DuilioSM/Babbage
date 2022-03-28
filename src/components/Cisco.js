@@ -5,8 +5,9 @@ import topologiaLogica from "../assets/topologiaLogica.png";
 import topologiaFisica from "../assets/topologiaFisica.png";
 
 function Cisco() {
+
   return (
-    <div className="">
+    <div  className="">
       <CiscoItem
         title="Topología lógica"
         text="En esta red conectamos el cloud directamente a nuestro router, el cual se conecta con nuestro switch y este manda la señal a cuatro PCs y a un servidor local de datos"

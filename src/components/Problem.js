@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import LogoBitacora from "../assets/Logo-bitacora.png";
+import gsap, { Power2 } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Problem() {
+  let infoItem = useRef(null);
+  let imageItem = useRef(null);
+
+  useEffect(() => {
+    gsap.from(infoItem, {
+      duration: 2.5,
+      opacity: 0,
+      x: -800 ,
+      ease: Power2.easeInOut,
+    });
+    gsap.from(imageItem, {
+      duration: 2.5,
+      opacity: 0,
+      x: 400,
+      delay: 0.5,
+      ease: Power2.easeInOut,
+    });
+  }, []);
+
   return (
     <div className="flex py-16 px-10 items-center text-justify bg-blueGray md:py-28 md:px-20">
-      <div>
+      <div ref={el => {infoItem = el}}>
         <h3 className=" text-4xl font-extrabold leading-tight tracking-wider text-center md:text-left md:text-5xl">Bitacora UTJ</h3>
         <p className="pt-1 text-l text-grayText leading-normal tracking-widest">
           La Universidad Tecnológica de Jalisco tiene varios laboratorios y
@@ -36,7 +59,7 @@ function Problem() {
           obsoletos.
         </p>
       </div>
-      <img className="hidden md:block md:h-fit " alt="Logo bitácora" src={LogoBitacora}/>
+      <img ref={el => {imageItem = el}} className="hidden md:block md:h-fit " alt="Logo bitácora" src={LogoBitacora}/>
     </div>
   );
 }
