@@ -56,7 +56,7 @@ function Header() {
         ref={el =>{navItem = el}}
           className={
             (showNav ? "left-0" : "-left-full") +
-            "  transition-left fixed justify-start bottom-0 top-[10vh] bg-grayText opacity-90 bg w-3/4 text-white space-y-5 p-5 shadow-item md:shadow-none md:static md:flex md:space-y-0 md:text-black md:bg-transparent md:w-auto md:space-x-3 md:items-center"
+            "  transition-left fixed justify-start bottom-0 top-[10vh] bg-grayText opacity-90 h-[90vh] w-3/5 text-white space-y-5 p-5 shadow-item md:shadow-none md:static md:flex md:space-y-0 md:text-black md:bg-transparent md:w-auto md:space-x-3 md:items-center"
           }
         >
           <li className="hover:underline decoration-highRed decoration-4 text-2xl active:text-highRed md:text-base">
