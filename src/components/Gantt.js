@@ -1,18 +1,17 @@
 import React, { useRef, useEffect } from "react";
 import gsap, { Power2 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import croquis from "../assets/Croquis1.png";
+import gantt from "../assets/gantt.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function Croquis() {
-  let titleCroquisItem = useRef(null);
-  let croquisItem = useRef(null);
-
+function Gantt() {
+  let titleItem = useRef(null);
+  let imageItem = useRef(null);
   useEffect(() => {
-    gsap.from(titleCroquisItem, {
+    gsap.from(titleItem, {
       scrollTrigger: {
-        trigger: titleCroquisItem,
+        trigger: titleItem,
         start: " 80%",
         toggleActions: "play none none reverse",
       },
@@ -21,9 +20,9 @@ function Croquis() {
       y: 200,
       ease: Power2.easeInOut,
     });
-    gsap.from(croquisItem, {
+    gsap.from(imageItem, {
       scrollTrigger: {
-        trigger: croquisItem,
+        trigger: imageItem,
         start: " 80%",
         toggleActions: "play none none reverse",
       },
@@ -35,21 +34,21 @@ function Croquis() {
     });
   }, []);
   return (
-    <div className=" flex flex-col p-10 items-center ">
+    <div className=" flex flex-col p-10 items-center  ">
       <h3
-        ref={(el) => (titleCroquisItem = el)}
+        ref={(el) => (titleItem = el)}
         className="p-4 text-3xl font-extrabold leading-tight tracking-wider text-center md:text-left md:text-5xl"
       >
-        Croquis
+        Diagrama de Gantt
       </h3>
       <img
-        ref={(el) => (croquisItem = el)}
-        className="  border rounded-xl shadow-item md:h-[70vh]"
-        src={croquis}
+        ref={(el) => (imageItem = el)}
+        className=" w-fit border rounded-xl shadow-item "
+        src={gantt}
         alt="Croquis"
       />
     </div>
   );
 }
 
-export default Croquis;
+export default Gantt;
