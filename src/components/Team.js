@@ -1,6 +1,10 @@
 import React, { useRef, useEffect } from "react";
 import TeamItem from "./TeamItem";
-import TeamIcon from "../assets/TeamIcon.png";
+// import TeamIcon from "../assets/TeamIcon.png";
+import andres from "../assets/andres.JPG";
+import carlos from "../assets/carlos.JPG";
+import victor from "../assets/victor.JPG";
+import duilio from "../assets/duilio.JPG";
 import gsap, { Power2 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -81,7 +85,7 @@ function Team() {
           num="tel:3312259518"
           link="https://www.linkedin.com/in/alejandro-garc%C3%ADa-47554a234/"
           position="Administrador de software"
-          img={TeamIcon}
+          img={carlos}
         />
         <TeamItem
           key="Victor"
@@ -89,7 +93,7 @@ function Team() {
           num="tel:3315570447"
           link="https://www.linkedin.com/in/victor-emilio-gonzalez-guzman-23b720234/"
           position="Diseñador"
-          img={TeamIcon}
+          img={victor}
         />
         <TeamItem
           key="Andres"
@@ -97,7 +101,7 @@ function Team() {
           num="tel:3324809257"
           link="https://www.linkedin.com/in/andr%C3%A9s-francisco-mart%C3%ADnez-rinc%C3%B3n-242720234/"
           position="Desarrollador Java"
-          img={TeamIcon}
+          img={andres}
         />
         <TeamItem
           key="Duilio"
@@ -105,7 +109,7 @@ function Team() {
           num="tel:3325979382"
           link="https://www.linkedin.com/in/duilio-sotelo-a8244a1b0/"
           position="Desarrollador web"
-          img={TeamIcon}
+          img={duilio}
         />
       </div>
     </div>
