@@ -77,7 +77,7 @@ function Team() {
         ref={(el) => {
           teamItems = el;
         }}
-        className="pt-6 pb-20  grid gap-8 grid-cols-1 md:grid-cols-2 md:grid-rows-2 "
+        className="pt-6 pb-20  grid gap-12 grid-cols-1 md:grid-cols-4 "
       >
         <TeamItem
           key="Carlos"
